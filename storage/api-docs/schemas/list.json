@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "transactions": {
+            "type": "array",
+            "items": {
+                "$ref": "./transaction.json"
+            }
+        },
+        "balance": {
+            "type": "object",
+            "properties": {
+                "income": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 1000
+                },
+                "outcome": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 300
+                },
+                "total": {
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 700
+                }
+            }
+        }
+    }
+}

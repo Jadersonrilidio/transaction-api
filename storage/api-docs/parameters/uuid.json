@@ -1,0 +1,8 @@
+{
+    "name": "uuid",
+    "in": "path",
+    "required": true,
+    "schema": {
+        "type": "string"
+    }
+}

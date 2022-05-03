@@ -1,0 +1,398 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Transaction API with Laravel",
+        "description": "An API developed to store and retrieve simple transaction data",
+        "contact": {
+            "name": "Jay Dev",
+            "email": "contato@jadersonrodrigues.com",
+            "url": "https://www.jadersonrodrigues.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api",
+            "description": "Development test server (uses test data)"
+        }
+    ],
+    "paths": {
+        "/transactions": {
+            "get": {
+                "summary": "Get transactions list",
+                "description": "Return all transactions list with balance of income, outcome and total",
+                "tags": [
+                    "Transactions"
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200List"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a transaction",
+                "description": "Creates a transaction and return it in a JSON object",
+                "tags": [
+                    "Transactions"
+                ],
+                "requestBody": {
+                    "$ref": "#/components/requestBodies/TransactionForm"
+                },
+                "responses": {
+                    "201": {
+                        "$ref": "#/components/responses/201"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/422"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            }
+        },
+        "/transactions/{uuid}": {
+            "get": {
+                "summary": "Get transaction by uuid",
+                "description": "Returns a JSON object with the corresponding transaction by uuid",
+                "tags": [
+                    "Transactions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/Uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200Transaction"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update transaction",
+                "description": "Update the corresponding transaction uuid in the database and return a JSON object",
+                "tags": [
+                    "Transactions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/Uuid"
+                    }
+                ],
+                "requestBody": {
+                    "$ref": "#/components/requestBodies/TransactionForm"
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200Transaction"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/422"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Get transactions list",
+                "description": "Return all transactions list with balance of income, outcome and total",
+                "tags": [
+                    "Transactions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/Uuid"
+                    }
+                ],
+                "requestBody": {
+                    "$ref": "#/components/requestBodies/TransactionForm"
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200Transaction"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/400"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/422"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a transaction",
+                "description": "Delete from database the corresponding transaction uuid and return a JSON object with the transaction",
+                "tags": [
+                    "Transactions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/Uuid"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/200Transaction"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/404"
+                    },
+                    "5XX": {
+                        "$ref": "#/components/responses/5XX"
+                    },
+                    "default": {
+                        "$ref": "#/components/responses/Default"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Transaction": {
+                "$ref" : "./schemas/transaction.json"
+            },
+            "List": {
+                "type": "object",
+                "properties": {
+                    "transactions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Transaction"
+                        }
+                    },
+                    "balance": {
+                        "type": "object",
+                        "properties": {
+                            "income": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 1000
+                            },
+                            "outcome": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 300
+                            },
+                            "total": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 700
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "parameters": {
+            "Uuid": {
+                "name": "uuid",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "requestBodies": {
+            "Transaction": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "example": "payments"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "example": 2000
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "income",
+                            "outcome"
+                        ],
+                        "example": "income"
+                    }
+                },
+                "required": [
+                    "title",
+                    "value",
+                    "type"
+                ]
+            },
+            "TransactionForm": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/requestBodies/Transaction"
+                        }
+                    },
+                    "application/x-www-form-urlencoded": {
+                        "schema": {
+                            "$ref": "#/components/requestBodies/Transaction"
+                        }
+                    }
+                }
+            }
+        },
+        "responses": {
+            "200Transaction": {
+                "description": "Success",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#components/schemas/Transaction"
+                        }
+                    }
+                }
+            },
+            "200List": {
+                "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/List"
+                                }
+                            }
+                        }
+            },
+            "201": {
+                "description": "Transaction created with success!",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/Transaction"
+                        }
+                    }
+                }
+            },
+            "Default": {
+                "description": "Bad request!",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "string",
+                                    "example": "Bad request!"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "400": {
+                "description": "Bad request - Balance exceeded!",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "string",
+                                    "example": "Bad request - Balance exceeded!"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Not found",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "string",
+                                    "example": "Not found"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "422": {
+                "description": "Invalid parameters or nothing to update!",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "string",
+                                    "example": "Invalid parameters or nothing to update!"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "5XX": {
+                "description": "Internal Server error! Try again Later!",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "string",
+                                    "example": "Internal Server error! Try again Later!"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

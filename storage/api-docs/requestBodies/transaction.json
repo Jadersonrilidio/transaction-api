@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "example": "payments"
+        },
+        "value": {
+            "type": "integer",
+            "example": 2000
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "income",
+                "outcome"
+            ],
+            "example": "income"
+        }
+    },
+    "required": [
+        "title",
+        "value",
+        "type"
+    ]
+}

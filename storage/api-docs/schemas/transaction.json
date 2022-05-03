@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "example": "597855ab-9296-43e5-b2a4-0f8127430eb2"
+        },
+        "title": {
+            "type": "string",
+            "example": "payments"
+        },
+        "value": {
+            "type": "integer",
+            "example": 2000
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "income",
+                "outcome"
+            ],
+            "example": "income"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "22-04-21 12:04:40"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "22-04-21 12:04:40"
+        }
+    },
+    "required": [
+        "title",
+        "value",
+        "type"
+    ]
+}

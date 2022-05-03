@@ -1,0 +1,16 @@
+{
+    "description": "Nothing to update!",
+    "content": {
+        "application/json": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "string",
+                        "example": "Nothing to update!"
+                    }
+                }
+            }
+        }
+    }
+}
