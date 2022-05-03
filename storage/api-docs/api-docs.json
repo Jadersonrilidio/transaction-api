@@ -8,16 +8,16 @@
             "email": "contato@jadersonrodrigues.com",
             "url": "https://www.jadersonrodrigues.com"
         },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
-        },
         "version": "v1.0.0"
     },
     "servers": [
         {
             "url": "http://localhost:8000/api",
             "description": "Development test server (uses test data)"
+        },
+        {
+            "url": "https://thawing-brushlands-51434.herokuapp.com/api",
+            "description": "Production Heroku server"
         }
     ],
     "paths": {
@@ -196,7 +196,44 @@
     "components": {
         "schemas": {
             "Transaction": {
-                "$ref" : "./schemas/transaction.json"
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "example": "597855ab-9296-43e5-b2a4-0f8127430eb2"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "payments"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "example": 2000
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "income",
+                            "outcome"
+                        ],
+                        "example": "income"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "22-04-21 12:04:40"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "22-04-21 12:04:40"
+                    }
+                },
+                "required": [
+                    "title",
+                    "value",
+                    "type"
+                ]
             },
             "List": {
                 "type": "object",
@@ -288,7 +325,7 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#components/schemas/Transaction"
+                            "$ref": "#/components/schemas/Transaction"
                         }
                     }
                 }
