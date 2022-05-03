@@ -3,12 +3,11 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url(env('DATABASE_URL', "postgres://buimwfhctvndqt:d07dbe49c73ea7191e2387f72fffa4a32dee25491a79cef471c92aef83ec07bb@ec2-52-86-56-90.compute-1.amazonaws.com:5432/d5ved6uc361nr0"));
+$DATABASE_URL = parse_url(env('DATABASE_URL', NULL));
 
 return [
 
     /*
-
     |--------------------------------------------------------------------------
     | Default Database Connection Name
     |--------------------------------------------------------------------------
