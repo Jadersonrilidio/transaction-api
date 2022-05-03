@@ -12,12 +12,12 @@
     },
     "servers": [
         {
-            "url": "http://localhost:8000/api",
-            "description": "Development test server (uses test data)"
+            "url": "https://transaction-api-with-laravel.herokuapp.com/api",
+            "description": "Production Heroku server"
         },
         {
-            "url": "https://thawing-brushlands-51434.herokuapp.com/api",
-            "description": "Production Heroku server"
+            "url": "http://localhost/api",
+            "description": "Development test server"
         }
     ],
     "paths": {
