@@ -1,16 +1,48 @@
-<p align="center"><a href="https://link_to_homepage/api/about" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
-
-<p align="center">
-<a href="#"><img src="" alt="Sample"></a>
-</p>
+<p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/api/documentation" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
 
 ## About the Project
 
 This app consists in an API for storing and retrieving simple transaction data.
 
-This project was developed according to a code challenge found on internet, where web developers were challenged to create an web application. The challenge requirements could be seen at [challenge page](https://link_to_challenge_page).
+This project was developed according to a code challenge found on internet, with couple further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api-with-laravel.herokuapp.com/challenge).
 
-The **API documentation** is available at [API Documentation](https://link_to_api_documentation/api/documentation).
+The **API documentation** is available at [API Documentation](https://transaction-api-with-laravel.herokuapp.com/api/documentation).
+
+## Installation and Local Environment Setup
+
+Follow below the steps to setup and run the application at a local environment.
+
+Clone the github repository to your local machine with the command:
+
+    $ git clone https://github.com/Jadersonrilidio/transaction-api-with-laravel
+
+Create and edit the .env file Database variables (It is recommended to configure a sqlite3 database with the following setups):
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_USERNAME=root
+    DB_PASSWORD=
+    
+For an sqlite3 database, create a file at the root folder of the project with the command:
+
+    $ touch ./datbase/database.sqlite
+
+After configured the database and the db variables, run the migrations with the command:
+
+    $ php artisan migrate
+
+Finally, use the command below to run the application:
+
+    $ php artisan serve
+
+You also have the option to run the database seed command to populate the database:
+
+    $ php artisan db:seed
+
+Also you can run the unit tests with the command:
+
+    $ php artisan test
 
 ## Contributing
 
