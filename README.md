@@ -24,9 +24,9 @@ Create and edit the .env file Database variables (It is recommended to configure
     DB_USERNAME=root
     DB_PASSWORD=
     
-For an sqlite3 database, create a file at the root folder of the project with the command:
+For a sqlite3 database, create a file at the root folder of the project with the command:
 
-    $ touch ./datbase/database.sqlite
+    $ touch ./database/database.sqlite
 
 After configured the database and the db variables, run the migrations with the command:
 
