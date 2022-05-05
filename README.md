@@ -1,12 +1,14 @@
 <p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/about" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
 
+
 ## About the Project
 
 The app consists in an API for storing and retrieving financial transaction data.
 
 This project was developed according to a code challenge found on internet, with further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api-with-laravel.herokuapp.com/challenge).
 
-The **API documentation** is available at [API Documentation](https://transaction-api-with-laravel.herokuapp.com/api/documentation).
+The **API documentation** is available at [API Documentatio`n`](https://transaction-api-with-laravel.herokuapp.com/api/documentation).
+
 
 ## Installation and Local Environment Setup
 
@@ -44,9 +46,11 @@ Also you can run the unit tests with the command:
 
     $ php artisan test
 
+
 ## Contributing
 
 Thank you for considering contributing to the Transaction API Project! For contributing, please send an e-mail to Jaderson Rodrigues [contato@jadersonrodrigues.com](contato@jadersonrodrigues.com).
+
 
 ## Security Vulnerabilities
 
