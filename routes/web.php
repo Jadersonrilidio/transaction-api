@@ -13,14 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/challenge', [App\Http\Controllers\ChallengeController::class, 'index']);
-
-Route::get('/challenge', function () {
-    return App\Http\Controllers\ChallengeController::index();
+Route::fallback(function () {
+    return view('app/about');
 });
 
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
+Route::get('/challenge', [App\Http\Controllers\ChallengeController::class, 'challenge'])->name('app.challenge');
 
-Route::get('/about', function () {
-    return App\Http\Controllers\AboutController::index();
-});
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'about']);

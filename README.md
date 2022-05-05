@@ -2,9 +2,9 @@
 
 ## About the Project
 
-This app consists in an API for storing and retrieving simple transaction data.
+The app consists in an API for storing and retrieving financial transaction data.
 
-This project was developed according to a code challenge found on internet, with couple further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api-with-laravel.herokuapp.com/challenge).
+This project was developed according to a code challenge found on internet, with further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api-with-laravel.herokuapp.com/challenge).
 
 The **API documentation** is available at [API Documentation](https://transaction-api-with-laravel.herokuapp.com/api/documentation).
 
