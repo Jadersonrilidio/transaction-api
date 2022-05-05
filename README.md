@@ -1,4 +1,4 @@
-<p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/api/documentation" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
+<p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/about" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
 
 ## About the Project
 
