@@ -18,7 +18,7 @@ Clone the github repository to your local machine with the command:
 
     $ git clone https://github.com/Jadersonrilidio/transaction-api-with-laravel
 
-Create and edit the .env file Database variables (It is recommended to configure a sqlite3 database with the following setups):
+Create and edit the .env file Database variables (It is recommended to configure a mysql database with the following setups):
 
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
