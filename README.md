@@ -1,13 +1,13 @@
-<p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/about" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
+<p align="center"><a href="https://transaction-api.fly.dev/api/documentation" target="_blank"><img src="./resources/images/github-header-logo.png" width="400"></a></p>
 
 
 ## About the Project
 
 The app consists in an API for storing and retrieving financial transaction data.
 
-This project was developed according to a code challenge found on internet, with further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api-with-laravel.herokuapp.com/challenge).
+This project was developed according to a code challenge found on internet, with further improvements. The challenge requirements could be seen at [challenge page](https://transaction-api.fly.dev/challenge).
 
-The **API documentation** is available at [API Documentation](https://transaction-api-with-laravel.herokuapp.com/api/documentation).
+The **API documentation** is available at [API Documentation](https://transaction-api.fly.dev/api/documentation).
 
 
 ## Installation and Local Environment Setup
@@ -16,7 +16,7 @@ Follow below the steps to setup and run the application at a local environment.
 
 Clone the github repository to your local machine with the command:
 
-    $ git clone https://github.com/Jadersonrilidio/transaction-api-with-laravel
+    $ git clone https://github.com/Jadersonrilidio/transaction-api
 
 Create and edit the .env file Database variables (It is recommended to configure a mysql database with the following setups):
 
@@ -49,9 +49,9 @@ Also you can run the unit tests with the command:
 
 ## Contributing
 
-Thank you for considering contributing to the Transaction API Project! For contributing, please send an e-mail to Jaderson Rodrigues [contato@jadersonrodrigues.com](contato@jadersonrodrigues.com).
+Thank you for considering contributing to the Transaction API Project! For contributing, please send an e-mail to Jaderson Rodrigues [jaderson.rodrigues@yahoo.com](jaderson.rodrigues@yahoo.com).
 
 
 ## Security Vulnerabilities
 
-If you discover any security vulnerability within the project, please send an e-mail to please send an e-mail to Jaderson Rodrigues [contato@jadersonrodrigues.com](contato@jadersonrodrigues.com).
+If you discover any security vulnerability within the project, please send an e-mail to please send an e-mail to Jaderson Rodrigues [jaderson.rodrigues@yahoo.com](jaderson.rodrigues@yahoo.com).

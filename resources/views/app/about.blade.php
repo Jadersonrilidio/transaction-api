@@ -17,14 +17,14 @@
 
     <!------- START PAGE CONTENT ---------------------------------------------------->
 
-    <p align="center"><a href="https://transaction-api-with-laravel.herokuapp.com/api/documentation" target="_blank"><img src="{{ asset('/images/github-header-logo.png') }}" width="500"></a></p>
+    <p align="center"><a href="https://transaction-api.fly.dev/api/documentation" target="_blank"><img src="{{ asset('/images/github-header-logo.png') }}" width="500"></a></p>
 
     <div class="pt-3">
         <nav class="navbar navbar-dark navbar-expand-sm bg-secondary justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="{{ route('app.challenge') }}">Challenge</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://transaction-api-with-laravel.herokuapp.com/api/documentation">API Documentation</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/Jadersonrilidio/transaction-api-with-laravel">GitHub Repository</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://transaction-api.fly.dev/api/documentation">API Documentation</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/Jadersonrilidio/transaction-api">GitHub Repository</a></li>
             </ul>
         </nav>
     </div>
